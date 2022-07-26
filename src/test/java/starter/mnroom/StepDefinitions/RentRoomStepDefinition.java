@@ -15,7 +15,7 @@ public class RentRoomStepDefinition {
     RentRoomStep rentRoomStep;
 
     @Given("user already login")
-    public void userAlreadyLogin() throws AWTException {
+    public void userAlreadyLogin() {
         rentRoomStep.beforeStepBelow();
     }
 

@@ -3,6 +3,7 @@ package starter.mnroom.Pages;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
 
 import java.awt.*;
@@ -38,22 +39,19 @@ public class LoginPage extends PageObject {
 
     public void clickLoginButton(){
         loginclick.click();
-//        System.setProperty("webdriver.chrome.driver","G:\\chromedriver.exe");
-//        WebDriver driver = new ChromeDriver();
-//        // Switching to Alert
-//        Alert alert = driver.switchTo().alert();
-//
-//        // Capturing alert message.
-//        String alertMessage = driver.switchTo().alert().getText();
-//        assertTrue(alertMessage.equalsIgnoreCase("success"));
-//
-//        // Accepting alert
-//        alert.accept();
-    }
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
-    public void alertAcceptWithEnter() throws AWTException {
-        Robot robot = new Robot();
-        robot.keyPress(KeyEvent.VK_ENTER); //press enter key
-        robot.keyRelease(KeyEvent.VK_ENTER);
-    }   
+        // Switching to Alert
+        Alert alert = getDriver().switchTo().alert();
+
+        // Capturing alert message.
+        String alertMessage = getDriver().switchTo().alert().getText();
+
+        // Accepting alert
+        alert.accept();
+    }
 }

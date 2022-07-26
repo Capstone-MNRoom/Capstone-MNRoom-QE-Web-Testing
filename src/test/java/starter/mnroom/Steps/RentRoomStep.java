@@ -16,14 +16,13 @@ public class RentRoomStep {
     PaymentPage paymentPage;
 
     @Step
-    public void beforeStepBelow() throws AWTException {
+    public void beforeStepBelow() {
         homepage.open();
         homepage.clickLoginHomepage();
 
         loginPage.fillEmail();
         loginPage.fillPassword();
         loginPage.clickLoginButton();
-        loginPage.alertAcceptWithEnter();
     }
 
     @Step
@@ -55,12 +54,12 @@ public class RentRoomStep {
 
     @Step
     public void selectStartDate(){
-        formRentPage.pickStartDate();
+        formRentPage.selectStartDate();
     }
 
     @Step
     public void selectEndDate(){
-        formRentPage.pickEndDate();
+        formRentPage.selectEndDate();
     }
 
     @Step

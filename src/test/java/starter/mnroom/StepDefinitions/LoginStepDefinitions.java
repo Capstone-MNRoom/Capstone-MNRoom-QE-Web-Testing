@@ -15,10 +15,10 @@ public class LoginStepDefinitions {
     @Steps
     LoginStep loginStep;
 
-    @Given("user already on homepage")
-    public void userAlreadyOnHomepage() {
-        loginStep.verifyHomepage();
-    }
+//    @Given("user already on homepage")
+//    public void userAlreadyOnHomepage() {
+//        loginStep.verifyHomepage();
+//    }
 
     @When("user click on login button")
     public void userClickOnLoginButton() {

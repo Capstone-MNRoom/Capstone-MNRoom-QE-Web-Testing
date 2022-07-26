@@ -42,8 +42,7 @@ public class LoginStep {
     }
 
     @Step
-    public void clickLoginButton() throws AWTException {
+    public void clickLoginButton() {
         loginPage.clickLoginButton();
-        loginPage.alertAcceptWithEnter();
     }
 }

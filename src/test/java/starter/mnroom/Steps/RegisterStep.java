@@ -1,25 +1,25 @@
 package starter.mnroom.Steps;
 
 import net.thucydides.core.annotations.Step;
-import starter.mnroom.Pages.HomePage;
+import starter.mnroom.Pages.Homepage;
 import starter.mnroom.Pages.LoginPage;
 import starter.mnroom.Pages.RegisterPage;
 import static org.junit.Assert.*;
 
 public class RegisterStep {
 
-    HomePage homePage;
+    Homepage homepage;
     LoginPage loginPage;
     RegisterPage registerPage;
 
     @Step
     public void openHomePage(){
-        homePage.open();
+        homepage.open();
     }
 
     @Step
     public void clickRegisterButton(){
-        homePage.clickRegisterButton();
+        homepage.clickRegisterButton();
     }
 
     @Step
@@ -60,7 +60,7 @@ public class RegisterStep {
 
     @Step
     public void verifyLoginPage(){
-        String headerPage = loginPage.getHeaderPage();
+        String headerPage = loginPage.getLoginHeader();
         assertTrue(headerPage.equalsIgnoreCase("login"));
     }
 }
