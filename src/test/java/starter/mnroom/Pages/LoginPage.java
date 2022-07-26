@@ -55,5 +55,5 @@ public class LoginPage extends PageObject {
         Robot robot = new Robot();
         robot.keyPress(KeyEvent.VK_ENTER); //press enter key
         robot.keyRelease(KeyEvent.VK_ENTER);
-    }
+    }   
 }
